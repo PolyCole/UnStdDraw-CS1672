@@ -1,5 +1,13 @@
 import edu.princeton.cs.introcs.StdDraw;
 
+/*
+ * Author: Cole Polyak
+ * Driver.java
+ * 23 January 2018
+ * 
+ * 
+ */
+
 public class Driver {
 
 	public static void main(String[] args) {

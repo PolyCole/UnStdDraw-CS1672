@@ -1,6 +1,13 @@
 import edu.princeton.cs.introcs.StdDraw;
 import java.awt.Color;
 
+/*
+ * Author: Cole Polyak
+ * UnStdDraw.java
+ * 23 January 2018
+ * 
+ * 
+ */
 public class UnStdDraw {
 
 	public static Color DENIM_BLUE = new Color(34, 67, 182);
