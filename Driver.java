@@ -12,9 +12,12 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
-		StdDraw.setPenColor(UnStdDraw.AGED_MOUSTACHE_GREY);
-		StdDraw.filledSquare(0.5, 0.5, 0.2);
-
+		//Example of how a hexagon would be created around .5, .5
+		double[] x = {0.6, 0.55, .45, .4, .45, .55};
+		double[] y = {.5, .586603, .586603, .5, .413397, .413397};
+		
+		StdDraw.setPenColor(UnStdDraw.DARK_SALMON_INJUSTICE);
+		//StdDraw.filledPolygon(x, y);
 	}
 
 }
