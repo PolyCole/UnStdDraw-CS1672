@@ -9,7 +9,7 @@ import java.awt.Color;
  * 
  */
 
-//"Any work of art quickly reveals itself to be a linked system of problems" -George Saunders
+
 
 public class UnStdDraw {
 
@@ -22,12 +22,21 @@ public class UnStdDraw {
 	
 	public static void filledRegularNgon(double centerX, double centerY, double radius, int n)
 	{
-		double changeX = Math.cos(((2.0*Math.PI)/(double)n))*radius;
-		double changeY = Math.sin(((2.0*Math.PI)/(double)n))*radius;
-		
+		double angle = (2*Math.PI)/(double)n;
+		double cur = angle;
+	
 		double[] xPoints = new double[n];
 		double[] yPoints = new double[n];
 		
+		for(int i = 0; i < n; ++i)
+		{
+			xPoints[i] = centerX + Math.cos(cur)*radius;
+			yPoints[i] = centerY + Math.sin(cur)*radius;
+			
+			cur += angle;
+		}
+		
+		StdDraw.filledPolygon(xPoints, yPoints);
 		++ngonCount;
 	}
 

@@ -18,6 +18,12 @@ public class Driver {
 		
 		StdDraw.setPenColor(UnStdDraw.DARK_SALMON_INJUSTICE);
 		//StdDraw.filledPolygon(x, y);
+		
+		//UnStdDraw.filledRegularNgon(0.5, 0.5, 0.25, 10);
+		
+		UnStdDraw.spiral(0.5, 0.5, 0.5, 4, 10);
+		
+		System.out.println("NGon Count: " + UnStdDraw.getNgonCount());
 	}
 
 }
