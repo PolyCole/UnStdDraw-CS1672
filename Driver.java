@@ -5,6 +5,7 @@ import edu.princeton.cs.introcs.StdDraw;
  * Driver.java
  * 23 January 2018
  * 
+ * Driver.java
  * 
  */
 
@@ -12,18 +13,31 @@ public class Driver {
 
 	public static void main(String[] args) {
 		
-		//Example of how a hexagon would be created around .5, .5
-		double[] x = {0.6, 0.55, .45, .4, .45, .55};
-		double[] y = {.5, .586603, .586603, .5, .413397, .413397};
+		// Canvas initialization
+		StdDraw.setCanvasSize(1500, 1500);
+		StdDraw.setXscale(0, 200);
+		StdDraw.setYscale(0, 200);
 		
+		// First Ngon
+		StdDraw.setPenColor(UnStdDraw.DENIM_BLUE);
+		UnStdDraw.filledRegularNgon(35, 35, 30, 7);
+
+		// Spiral
 		StdDraw.setPenColor(UnStdDraw.DARK_SALMON_INJUSTICE);
-		//StdDraw.filledPolygon(x, y);
+		StdDraw.setPenRadius(0.05);
+		UnStdDraw.spiral(90, 90, 50, 5, 5);
 		
-		//UnStdDraw.filledRegularNgon(0.5, 0.5, 0.25, 10);
+		// Second Ngon
+		StdDraw.setPenColor(UnStdDraw.DEHYDRATION);
+		UnStdDraw.filledRegularNgon(150, 150, 32, 15);
 		
-		UnStdDraw.spiral(0.5, 0.5, 0.5, 4, 10);
+		// Third Ngon
+		StdDraw.setPenColor(UnStdDraw.AGED_MOUSTACHE_GREY);
+		UnStdDraw.filledRegularNgon(50, 150, 12, 5);
 		
+		// Outputting static counter metholds.
 		System.out.println("NGon Count: " + UnStdDraw.getNgonCount());
+		System.out.println("Spiral Count: " + UnStdDraw.getSpiralCount());
 	}
 
 }
