@@ -6,8 +6,9 @@ import java.awt.Color;
  * UnStdDraw.java
  * 23 January 2018
  * 
- * 
  * UnStdDraw.java
+ * 
+ * This class creates two additional methods for StdDraw as well as four new colors.
  */
 
 
@@ -48,7 +49,6 @@ public class UnStdDraw {
 			cur += angle;
 		}
 		
-		// Uses filledPolygon to draw Regular Ngon.
 		StdDraw.filledPolygon(xPoints, yPoints);
 		
 		// Increments static count.
@@ -62,28 +62,23 @@ public class UnStdDraw {
 		// Determines total number of segments needed.
 		double totalSegments = (double)numSegments*spinRate;
 		
-		// Increments radius instead of angle this time.
+		// Increments radius instead of angle.
 		double radiusAddition = maxRadius / (double)totalSegments;
 		double currentRadius = 0;
 
-		// Used for drawing lines.
+		// Primary points for lines.
 		double oldX = centerX;
 		double oldY = centerY;
 
 		// Iterates over total number of sections needed.
 		for (int i = 0; i <= totalSegments; i++)
 		{
-			// Calculates new coord values.
+			// Calculates new point locations.
 			double newX = centerX + Math.cos((2*i*Math.PI)/(double)numSegments) * currentRadius;
 			double newY = centerY + Math.sin((2*i*Math.PI)/(double)numSegments) * currentRadius;
 
-			// Draws line segment.
 			StdDraw.line(oldX, oldY, newX, newY);
 			
-			// For use with bug testing.
-			// System.out.println("x: " + newX);
-			// System.out.println("y: " + newY + "\n");
-
 			// Increments radius.
 			currentRadius += radiusAddition;
 
@@ -91,11 +86,12 @@ public class UnStdDraw {
 			oldX = newX;
 			oldY = newY;
 		}
+
 		// Increments static count.
 		++spiralCount;
 	}
 	
-	//Getters.
+	//Getters
 	public static int getNgonCount()
 	{
 		return ngonCount;
