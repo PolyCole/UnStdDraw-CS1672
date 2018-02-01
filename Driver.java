@@ -7,6 +7,7 @@ import edu.princeton.cs.introcs.StdDraw;
  * 
  * Driver.java
  * 
+ * This class exercises the UnStdDraw.java class.
  */
 
 public class Driver {
