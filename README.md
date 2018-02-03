@@ -6,4 +6,9 @@ FilledRegularNgon
 -Draws a Regular Polygon with n sides.
 -Syntax: UnstdDraw.filledRegularNgon(double centerX, double centerY, double radius, int n);
 
-This is still a WIP repo.
+spiral
+--------
+-Creates spirals around a given point.
+-Syntax: UnStdDraw.spiral(double centerX, double centerY, double spinRate, int numSegments);
+
+Additionally, this class adds four new colors to StdDraw. 
